@@ -1,0 +1,67 @@
+* {
+  font-family: sans-serif;
+  font-size: 24px;
+  color: #222;
+}
+
+@media (max-width: 600px) {
+  * {
+    font-size: 18px;
+  }
+}
+
+body {
+  background-color: #F9F9F9;
+}
+
+a {
+  color: #222;
+}
+
+.game-container {
+  max-width: 500px;
+  margin: 1em auto;
+}
+
+.card {
+  border-radius: 2px;
+  background-color: #FFF;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+}
+
+.team {
+  border-left-width: 10px;
+  border-left-style: solid;
+  padding: 0.5em;
+}
+
+.team--top {
+  border-top-left-radius: 2px;
+}
+
+.team--bottom {
+  border-bottom-left-radius: 2px;
+}
+
+.game {
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.score {
+  text-align: right;
+}
+
+.status {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.score-col {
+  width: 10%;
+}
+
+.status-col {
+  width: 30%;
+}

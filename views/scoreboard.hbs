@@ -1,0 +1,34 @@
+{{#each games}}
+<a href="http://www.thescore.com{{ api_uri }}" target="_blank">
+  <div class="card game-container">
+    <table class="game">
+      <col class="team-col">
+      <col class="score-col">
+      <col class="status-col">
+      <tr>
+        <td class="team team--top" style="border-color:#{{default colours.away 'FFFFFF' }}">{{ away_team.medium_name }}</td>
+        <td class="score">
+          {{#is status 'in_progress'}}
+            {{ box_score.score.away.score }}
+          {{/is}}
+          {{#is status 'final'}}
+            {{ box_score.score.away.score }}
+          {{/is}}
+        </td>
+        <td rowspan="2" class="status">{{ game_status }}</td>
+      </tr>
+      <tr>
+        <td class="team team--bottom" style="border-color:#{{default colours.home 'FFFFFF' }}">{{ home_team.medium_name }}</td>
+        <td class="score">
+          {{#is status 'in_progress'}}
+            {{ box_score.score.home.score }}
+          {{/is}}
+          {{#is status 'final'}}
+            {{ box_score.score.home.score }}
+          {{/is}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</a>
+{{/each}}
